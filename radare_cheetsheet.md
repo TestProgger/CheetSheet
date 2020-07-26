@@ -57,15 +57,15 @@ e scr.utf8 = true
 * `~[n]` grep by columns `afl~[0]`
 * `~:n` grep by rows `afl~:0`
 ```
-	pi~mov,eax  		  ; lines with mov or eax
-	pi~mov&eax  		  ; lines with mov and eax
-	pi~mov,eax:6  		  ; 6 first lines with mov or eax
-	pd 20~call[0]:0       ; grep first column of the first row matching 'call'
+	pi~mov,eax  		  ; Линии в которых содеражатся mov или eax
+	pi~mov&eax  		  ; Линии в которых содеражатся mov и eax
+	pi~mov,eax:6  		  ; 6 первых линий в котрых содержится mov или eax
+	pd 20~call[0]:0       ; grep первый столбец первой строки с найденным call
 ```
-* `.cmd` Interprets command output
+* `.cmd` Интерпретирует вывод команды
 ```
-is* prints symbols
-.is* interprets output and define the symbols in radare (normally they are already loaded if r2 was not invoked with -n)
+is* печатает символы
+.is* Интерпретирует выходные данные и опеределеные символы в radare (normally they are already loaded if r2 was not invoked with -n)
 ```
 * `..` Пвоторить предыдущую команду (same as enter \n)
 * `(` Используется для определения и запуска макроса
